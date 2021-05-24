@@ -1,0 +1,53 @@
+{
+    "Start with main": {
+        "prefix": "start",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "using ll = long long;",
+            "#define rep(i, s, n) for (ll i = s; i < (ll)(n); i++)",
+            "",
+            "int main() {",
+            "  ll N;",
+            "  cin >> N;",
+            "  $0",
+            "}"
+        ]
+    },
+    "Easy for": {
+        "prefix": "for ",
+        "body": [
+            "for (ll i = 0; i < ${1:n}; i++) {$0",
+            "}"
+        ]
+    },
+    "Easy if": {
+        "prefix": "if ",
+        "body": [
+            "if ($1) {$0",
+            "}"
+        ]
+    },
+    "Easy output": {
+        "prefix": "cout << ",
+        "body": [
+            "cout << ${1:output} << endl;"
+        ]
+    },
+    "Yes or No": {
+        "prefix": "yes or no",
+        "body": [
+            "cout << (${1:flag} ? \"Yes\" : \"No\") << endl;"
+        ]
+    },
+    "Cout Vector": {
+        "prefix": "cout vector",
+        "body": [
+            "for (auto item : ${1:li}) {",
+            "  cout << item << \", \";",
+            "}",
+            "cout << endl;",
+        ]
+    }
+}
+
