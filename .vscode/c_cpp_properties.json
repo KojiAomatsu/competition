@@ -3,7 +3,8 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/Users/koji.aomatsu.mot/ac-library"
             ],
             "defines": [],
             "macFrameworkPath": [],
