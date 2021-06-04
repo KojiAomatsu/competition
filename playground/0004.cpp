@@ -6,4 +6,5 @@ using ll = long long;
 int main() {
   ll N;
   cin >> N;
+  vector<ll> li(N);
 }

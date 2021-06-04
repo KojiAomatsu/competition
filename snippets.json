@@ -14,6 +14,31 @@
             "}"
         ]
     },
+    "Start Codeforces": {
+        "prefix": "start codeforces",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "using ll = long long;",
+            "#define rep(i, s, n) for (ll i = s; i < (ll)(n); i++)",
+            "",
+            "ll calc(ll num, ll item) {",
+            "  ll ans = 0;",
+            "",
+            "  return ans;",
+            "}",
+            "",
+            "int main() {",
+            "  ll N;",
+            "  cin >> N;",
+            "  rep(i, 0, N) {",
+            "    ll tmp1, tmp2;",
+            "    cin >> tmp1 >> tmp2;",
+            "    cout << calc(tmp1, tmp2) << endl;",
+            "  }",
+            "}"
+        ]
+    },
     "Easy for": {
         "prefix": "for ",
         "body": [
@@ -43,11 +68,35 @@
     "Cout Vector": {
         "prefix": "cout vector",
         "body": [
-            "for (auto item : ${1:li}) {",
+            "for (auto item : ${1:vec}) {",
             "  cout << item << \", \";",
             "}",
-            "cout << endl;",
+            "cout << endl;"
+        ]
+    },
+    "Cout VecVec": {
+        "prefix": "cout vec vec",
+        "body": [
+            "for (auto vec : ${1:vecvec}) {",
+            "  for (auto item : vec) {",
+            "    cout << item << \", \";",
+            "  }",
+            "  cout << \".\" << endl;",
+            "}"
+        ]
+    },
+    "Cout VecVecVec": {
+        "prefix": "cout vec vec vec",
+        "body": [
+            "for (auto veve : ${1:vecvecvec}) {",
+            "  for (auto ve : veve) {",
+            "    for (auto item : ve) {",
+            "      cout << item << \", \";",
+            "    }",
+            "    cout << \".\" << endl;",
+            "  }",
+            "  cout << \"---\" << endl;",
+            "}"
         ]
     }
 }
-
