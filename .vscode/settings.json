@@ -12,6 +12,14 @@
         "deque": "cpp",
         "list": "cpp",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "__node_handle": "cpp",
+        "__tree": "cpp",
+        "algorithm": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "forward_list": "cpp",
+        "queue": "cpp",
+        "ratio": "cpp"
     }
 }
