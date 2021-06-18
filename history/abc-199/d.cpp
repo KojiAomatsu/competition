@@ -50,9 +50,17 @@ int main() {
     ll comb = 1;
     vector<ll> col(co.size(), 0);
     col[0] = 1; // 1 for red, 2 for green, 3 for blue;
-    rep(i, 1, co.size()) {
-      auto p_col = col[par[co[i]]];
-      for (auto ed : edges[co[i]]) {
+    rep(bit, 0, 1 << (co.size() - 1)) {
+      for (int i = 0; i < co.size() - 1; ++i) {
+        ll flag = bit & (1 << (co.size() - 2 - i));
+        if (col[par[co[i + 1]]] == 1) {
+          // 本当は既存の色を見て場合分けしたり
+          col[i + 1] = flag ? 3 : 2;
+        } else if (col[par[co[i + 1]]] == 2) {
+          col[i + 1] = flag ? 3 : 1;
+        } else if (col[par[co[i + 1]]] == 3) {
+          col[i + 1] = flag ? 2 : 1;
+        }
       }
     }
     comb *= 3;
