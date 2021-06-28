@@ -20,6 +20,12 @@
         "set": "cpp",
         "forward_list": "cpp",
         "queue": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "memory": "cpp",
+        "regex": "cpp",
+        "span": "cpp",
+        "chrono": "cpp",
+        "complex": "cpp",
+        "valarray": "cpp"
     }
 }
