@@ -20,6 +20,17 @@ int main() {
   rep(i, 1, minh[1]) { sumh += minw[i] - 1; }
   ll sumw = 0;
   rep(i, 1, minw[1]) { sumw += minh[i] - 1; }
-  atcoder::fenwick_tree<ll> tree(W + 1);
-  cout << (sumh + sumw - 11111) << endl;
+
+  map<ll, vector<ll>> ends;
+  rep(i, 1, minh[1]) { ends[minw[i]].push_back(i); }
+  atcoder::fenwick_tree<ll> tree(W + 2);
+  ll sumd = 0;
+  rep(i, 1, minh[1]) { tree.add(i, 1); }
+  rep(i, 1, minw[1]) {
+    for (auto end : ends[i]) {
+      tree.add(end, -1);
+    }
+    sumd += tree.sum(1, minh[i]);
+  }
+  cout << (sumh + sumw - sumd) << endl;
 }
