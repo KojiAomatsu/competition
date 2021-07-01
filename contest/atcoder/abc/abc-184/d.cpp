@@ -10,15 +10,25 @@ int main() {
   int A, B, C;
   cin >> A >> B >> C;
 
-  memo[99][99][99] = 1.0;
-  rep(i, 1, 300) {
-    while (true) {
-      int a, b, c;
-      a, b = 0;
-      c = i;
-      memo[99 - a][99 - b][99 - c] = memo[99 - a][99 - b][99 - c];
+  rep(sum, 0, 300) {
+    rep(a, 0, 100) {
+      rep(b, 0, 100) {
+        ll c = sum - a - b;
+        if (c > 99 || c < 0) {
+          continue;
+        }
+        if (a != 99) {
+          memo[99 - a][99 - b][99 - c] += (double)(99 - a) / (297 - sum) * (1.0 + memo[99 - a + 1][99 - b][99 - c]);
+        }
+        if (b != 99) {
+          memo[99 - a][99 - b][99 - c] += (double)(99 - b) / (297 - sum) * (1.0 + memo[99 - a][99 - b + 1][99 - c]);
+        }
+        if (c != 99) {
+          memo[99 - a][99 - b][99 - c] += (double)(99 - c) / (297 - sum) * (1.0 + memo[99 - a][99 - b][99 - c + 1]);
+        }
+      }
     }
   }
 
-  printf("%.8f", memo[A][B][C]);
+  printf("%.9f", memo[A][B][C]);
 }
