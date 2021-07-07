@@ -4,7 +4,7 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/Users/koji.aomatsu.mot/ac-library"
+                "/Users/aomatsu.koji/ac-library"
             ],
             "defines": [],
             "macFrameworkPath": [],

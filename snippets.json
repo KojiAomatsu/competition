@@ -108,5 +108,17 @@
             "  cout << \"---\" << endl;",
             "}"
         ]
+    },
+    "Cout yes or no": {
+        "prefix": "cout yes or no",
+        "body": [
+            "cout << (${1:fl} ? \"${2:Yes}\" : \"${3:No}\") << endl;"
+        ]
+    },
+    "accumulate": {
+        "prefix": "accumulate sum for ll",
+        "body": [
+            "ll sm = accumulate(li.begin(), li.end(), 0LL);"
+        ]
     }
 }
