@@ -3,7 +3,7 @@ using namespace std;
 using ll = long long;
 #define rep(i, s, n) for (ll i = s; i < (ll)(n); i++)
 
-// DFSの実装例
+// DFSの実装例 深さ優先探索
 bool vis[21];
 ll par[21];
 map<ll, vector<ll>> edges;
@@ -70,8 +70,7 @@ int main() {
             abl = false;
             break;
           }
-          if (abl == false)
-            break;
+          if (abl == false) break;
         }
       }
       if (abl) {

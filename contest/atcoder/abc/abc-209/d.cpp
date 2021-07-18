@@ -4,7 +4,7 @@ using ll = long long;
 using P = pair<ll, ll>;
 #define rep(i, s, n) for (ll i = s; i < (ll)(n); i++)
 
-// BFS 実装例
+// BFS 実装例 幅優先探索
 
 int main() {
   ll N, Q;

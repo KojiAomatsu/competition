@@ -31,8 +31,12 @@ ll gcd(vector<ll> &li) {
   return a;
 }
 
-void solve(ll num, vector<ll> li) {
+ll memo[220000][220000]; // i から j 個連続のgcd
+
+void solve(ll num, vector<ll> &li) {
   ll g = gcd(li);
+  rep(i, 1, num + 1) { memo[i][1] = li[i - 1]; }
+  rep(i, 1, num + 1) { ll gc = gcd(li[i - 1], memo[i][i]); }
   cout << g << endl;
 }
 
