@@ -40,6 +40,12 @@
         "limits": "cpp",
         "__functional_03": "cpp",
         "functional": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "__functional_base": "cpp",
+        "future": "cpp",
+        "istream": "cpp",
+        "locale": "cpp",
+        "thread": "cpp",
+        "variant": "cpp"
     }
 }

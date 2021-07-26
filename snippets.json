@@ -120,5 +120,11 @@
         "body": [
             "ll sm = accumulate(li.begin(), li.end(), 0LL);"
         ]
+    },
+    "printf double": {
+        "prefix": "printf double",
+        "body": [
+            "printf(\"%.11f\", ans);"
+        ]
     }
 }
