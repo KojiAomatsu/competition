@@ -4,7 +4,12 @@ using ll = long long;
 typedef pair<ll, ll> P;
 #define rep(i, s, n) for (ll i = s; i < (ll)(n); i++)
 
-void solve(ll num, vector<ll> li) {}
+ll solve(ll num) {
+  if (num < 6) {
+    return 15;
+  }
+  return (num + 1) / 2 * 5;
+}
 
 int main() {
   ll N;
@@ -12,8 +17,6 @@ int main() {
   rep(i, 0, N) {
     ll le;
     cin >> le;
-    vector<ll> li(le);
-    rep(j, 0, le) { cin >> li[j]; }
-    solve(le, li);
+    cout << solve(le) << endl;
   }
 }
