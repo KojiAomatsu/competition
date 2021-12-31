@@ -6,6 +6,7 @@ using P = pair<ll, ll>;
 
 ll mod = 998244353;
 ll dp[550][550][20]; // iまで決めた時に、j番目の候補がk個削れている時の場合の数（i < j）
+ll cnt[550];
 
 int main() {
   ll n, d;
@@ -30,10 +31,13 @@ int main() {
     return 0;
   }
   sort(cands.begin(), cands.end());
+  cnt[0] = 1;
   rep(t, 0, mis.size()) {
     ll idx = mis[t];
-    auto u = upper_bound(cands.begin(), cands.end(), idx + d);
-    auto l = lower_bound(cands.begin(), cands.end(), idx - d);
-    ll num = (ll)(u - cands.begin()) - (ll)(l - cands.begin());
+    auto u = upper_bound(cands.begin(), cands.end(), idx + d) - cands.begin();
+    auto l = lower_bound(cands.begin(), cands.end(), idx - d) - cands.begin();
+    ll num = u - l;
+    for (ll p = l; p <= u; p++) {
+    }
   }
 }
