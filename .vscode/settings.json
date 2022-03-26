@@ -107,6 +107,7 @@
         "rope": "cpp",
         "stop_token": "cpp",
         "syncstream": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "__bits": "cpp"
     }
 }
